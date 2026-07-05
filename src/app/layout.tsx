@@ -1,19 +1,38 @@
 import type { Metadata } from 'next';
+import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 
+const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  axes: ['opsz'],
+  variable: '--font-bricolage',
+  display: 'swap',
+});
+
+const instrumentSans = Instrument_Sans({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  variable: '--font-instrument-sans',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: {
-    default: 'Chooze — Choose Your Perfect AI Companion',
+    default: 'Chooze — Someone to talk to. Always.',
     template: '%s — Chooze',
   },
   description:
-    'Chooze is your gateway to meaningful conversations with AI-powered companions. Chat, call, and connect.',
+    'Friends who remember your team, your big day, your chai order. Chat free, forever. Hear their voice from ₹6 per minute with a live meter you can always see.',
   metadataBase: new URL('https://chooze.online'),
+  icons: {
+    icon: '/icon.svg',
+  },
   openGraph: {
-    title: 'Chooze — AI Companions',
-    description: 'Choose your perfect AI companion. Chat, call, and connect.',
+    title: 'Chooze — Someone to talk to. Always.',
+    description:
+      'Friends who remember you. Chat free forever, voice calls from ₹6/min with a live meter. No ads, no hidden charges.',
     url: 'https://chooze.online',
     siteName: 'Chooze',
     type: 'website',
@@ -26,13 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${bricolage.variable} ${instrumentSans.variable}`}>
       <body className="min-h-screen font-sans antialiased">
         <Header />
         <main>{children}</main>

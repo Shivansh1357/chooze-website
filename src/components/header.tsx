@@ -1,26 +1,41 @@
 import Link from 'next/link';
 
+const navLinks = [
+  { href: '/#remembers', label: 'She remembers' },
+  { href: '/#voice', label: 'Voice' },
+  { href: '/#pricing', label: 'Pricing' },
+  { href: '/#private', label: 'Private' },
+];
+
 export function Header() {
   return (
-    <header className="border-b border-border-default">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+    <header className="sticky top-0 z-40 border-b border-border-default bg-bg-primary/80 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-[1120px] items-center justify-between px-5 py-4 sm:px-8">
         <Link
           href="/"
-          className="font-display text-3xl font-bold bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent"
+          className="text-gradient-wordmark font-display text-[26px] font-extrabold tracking-[-0.5px]"
         >
-          Chooze
+          chooze
         </Link>
-        <nav className="hidden gap-6 sm:flex">
-          <Link href="/#features" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-            Features
+        <div className="flex items-center gap-7">
+          <nav className="hidden items-center gap-7 md:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[14.5px] font-semibold text-text-secondary transition-colors hover:text-text-primary"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <Link
+            href="/#download"
+            className="wtap bg-gradient-accent rounded-full px-[22px] py-[11px] text-sm font-extrabold text-ink"
+          >
+            Get the app
           </Link>
-          <Link href="/support" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-            Support
-          </Link>
-          <Link href="/privacy" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
-            Privacy
-          </Link>
-        </nav>
+        </div>
       </div>
     </header>
   );
