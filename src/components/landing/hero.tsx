@@ -15,7 +15,7 @@ export function Hero() {
           <div className="mb-[26px] inline-flex items-center gap-2 rounded-full border border-accent-green/35 bg-accent-green/10 px-4 py-[7px]">
             <span className="h-2 w-2 rounded-full bg-accent-green" />
             <span className="text-[13px] font-bold text-accent-green">
-              Now on Google Play · India
+              Early access · India
             </span>
           </div>
           <h1 className="font-display text-[44px] font-extrabold leading-[1.04] tracking-[-2px] text-text-primary sm:text-[56px] lg:text-[64px]">
@@ -30,15 +30,16 @@ export function Hero() {
           </p>
           <div className="mt-[34px] flex flex-wrap items-center gap-4">
             <a
-              href="#download"
+              href="/downloads/chooze.apk"
+              download
               className="wtap bg-gradient-accent-sweep flex items-center gap-2.5 rounded-[18px] px-[30px] py-4 text-[17px] font-extrabold text-ink shadow-[0_14px_36px_rgba(244,88,122,.35)]"
             >
               <GooglePlayIcon />
-              Get it on Google Play
+              Download for Android
             </a>
             <span className="text-sm text-text-tertiary">
-              Free chat app ·<br />
-              first voice call free
+              Free early-access APK ·<br />
+              52 MB · coming to Play Store
             </span>
           </div>
           <div className="mt-[38px] flex gap-[26px]">

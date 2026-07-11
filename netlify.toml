@@ -5,3 +5,11 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Serve the early-access APK as a proper Android package download
+[[headers]]
+  for = "/downloads/*.apk"
+  [headers.values]
+    Content-Type = "application/vnd.android.package-archive"
+    Content-Disposition = "attachment; filename=\"chooze.apk\""
+    Cache-Control = "public, max-age=300"

@@ -19,14 +19,15 @@ export function Cta() {
           </span>
         </p>
         <a
-          href="#"
+          href="/downloads/chooze.apk"
+          download
           className="wtap bg-gradient-accent-sweep mt-9 inline-flex items-center gap-2.5 rounded-[20px] px-[38px] py-[18px] text-lg font-extrabold text-ink shadow-[0_16px_44px_rgba(244,88,122,.4)]"
         >
           <GooglePlayIcon size={21} />
-          Get it on Google Play
+          Download for Android
         </a>
         <div className="mt-4 text-[13.5px] text-text-tertiary">
-          Free to download · chat free forever · 18+
+          Free early-access APK · chat free forever · 18+ · Play Store soon
         </div>
       </div>
     </section>

@@ -42,3 +42,7 @@ pnpm-debug.log*
 
 # OS
 Thumbs.db
+
+# Local Netlify folder
+.netlify
+public/downloads/*.apk
