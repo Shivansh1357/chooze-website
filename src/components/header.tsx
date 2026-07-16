@@ -11,11 +11,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border-default bg-bg-primary/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1120px] items-center justify-between px-5 py-4 sm:px-8">
-        <Link
-          href="/"
-          className="text-gradient-wordmark font-display text-[26px] font-extrabold tracking-[-0.5px]"
-        >
-          chooze
+        <Link href="/" className="flex items-center gap-2.5">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/chooze-mark.png" alt="" className="h-7 w-7" />
+          <span className="text-gradient-wordmark font-display text-[26px] font-extrabold tracking-[-0.5px]">
+            chooze
+          </span>
         </Link>
         <div className="flex items-center gap-7">
           <nav className="hidden items-center gap-7 md:flex">

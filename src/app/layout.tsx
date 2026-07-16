@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     'Friends who remember your team, your big day, your chai order. Chat free, forever. Hear their voice from ₹6 per minute with a live meter you can always see.',
   metadataBase: new URL('https://chooze.online'),
   icons: {
-    icon: '/icon.svg',
+    icon: [
+      { url: '/favicon-64.png', sizes: '64x64', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     title: 'Chooze — Someone to talk to. Always.',
@@ -36,6 +40,7 @@ export const metadata: Metadata = {
     url: 'https://chooze.online',
     siteName: 'Chooze',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Chooze — Chat. Share. Date.' }],
   },
 };
 
